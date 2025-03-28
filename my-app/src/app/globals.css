@@ -1,6 +1,30 @@
 @import "tailwindcss";
 
 
+.cool-underline {
+  position: relative;
+}
+
+.cool-underline ::after {
+  content: '';
+  height: 10px;
+  width: 100%;
+  background-color: #DC008366;
+  display: block;
+  position: absolute;
+  left: -8px;
+  width: 0;
+  bottom: 10px;
+  z-index: -1;
+  transform:skew(-21deg);
+  transition: all 0.5s ease-in-out;
+
+}
+.cool-underline.show-underline::after{
+  width: calc(100% + 16px); 
+}
+
+
 
 
 
@@ -46,8 +70,8 @@
   }
 } */
 
-body {
+/* body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
