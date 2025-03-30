@@ -4,8 +4,8 @@ import {redirect} from 'next/navigation';
 
 export async function GET() {
     const authUrl = nylas.auth.urlForOAuth2({
-        clientId: nylasConfig.clientId,
-        callbackUri: nylasConfig.callbackUri,
+        clientId: nylasConfig.clientId ,
+        redirectUri: nylasConfig.callbackUri,
     });
     return redirect(authUrl);
 
